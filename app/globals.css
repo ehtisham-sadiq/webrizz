@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 246 84% 59%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 187 83% 53%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 327 73% 68%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 246 84% 59%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 187 83% 53%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 327 73% 68%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading tracking-tight;
+  }
+  h1 {
+    @apply text-4xl font-extrabold md:text-5xl lg:text-6xl;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  h2 {
+    @apply text-3xl font-bold md:text-4xl;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  button,
+  .button {
+    @apply font-grotesk font-bold;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom styles for the WebRizz site */
+.bg-gradient-primary {
+  background: linear-gradient(45deg, #4f46e5, #22d3ee);
+  background-size: 200% 200%;
+  animation: gradient-shift 5s ease infinite;
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(45deg, #4f46e5, #ec4899);
+  background-size: 200% 200%;
+  animation: gradient-shift 5s ease infinite;
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(45deg, #4f46e5, #22d3ee);
+}
+
+.text-gradient-accent {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(45deg, #4f46e5, #ec4899);
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(31, 41, 55, 0.7);
+}
+
+/* Hover animations */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px 5px rgba(34, 211, 238, 0.3);
+}
+
+.hover-glow-accent:hover {
+  box-shadow: 0 0 15px 5px rgba(236, 72, 153, 0.3);
+}
+
+/* Button animations */
+.btn-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Scroll animations */
+.reveal {
+  opacity: 1; /* Changed from 0 to 1 */
+  transform: translateY(0); /* Changed from translateY(20px) to 0 */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Geometric shapes */
+.shape-circle {
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.shape-square {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.5;
+  transform: rotate(45deg);
+}
+
+/* Neon effects */
+.neon-border {
+  border: 2px solid #22d3ee;
+  box-shadow: 0 0 10px #22d3ee, 0 0 20px #22d3ee;
+}
+
+.neon-text {
+  text-shadow: 0 0 5px #22d3ee, 0 0 10px #22d3ee;
+}
+
+.neon-accent {
+  text-shadow: 0 0 5px #ec4899, 0 0 10px #ec4899;
+}
