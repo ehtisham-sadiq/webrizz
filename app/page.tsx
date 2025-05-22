@@ -1018,6 +1018,12 @@ export default function Home() {
                   one-size-fits-all approaches.
                 </p>
               </div>
+              <div className="bg-slate-800/50 glass rounded-lg p-6 shadow-lg border border-white/10 hover:shadow-glow transition-all hover:-translate-y-1 duration-300">
+                <h3 className="text-xl font-bold mb-2 text-white">Is AI really important?</h3>
+                <p className="text-white/80">
+                  Yes, it is very important in upcoming era.
+                </p>
+              </div>
             </div>
             <div className="mt-16 text-center reveal opacity-100" style={{ transitionDelay: "0.4s" }}>
               <p className="text-white/80 mb-4">Have more questions? We're here to help!</p>
