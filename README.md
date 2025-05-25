@@ -145,7 +145,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 - **Usama**: [chusama329@gmail.com](mailto:chusama329@gmail.com)
 - **Ehtisham Sadiq**: [ehtisham.selfworkf@gmail.com](mailto:ehtisham.selfworkf@gmail.com)
-- **Phone**: [+44 7951 753340](tel:+447951753340)
+- **Phone**: [+44 7440677107](tel:+447440677107)
 - **LinkedIn**: 
   - [Ehtisham's Profile](https://www.linkedin.com/in/ehtisham-sadiq)
   - [Usama's Profile](#) 
